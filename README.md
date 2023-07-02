@@ -11,6 +11,29 @@ To make your computer capable of ejecute all the scripts and make them work toge
 | Anaconda | To get the requirements needed. |
 | requirements.txt | Create enviroment with reuirements:  conda create --name <environment_name> --file requirements.txt . |
 
+## Connect to he robot:
+
+In order to connect to the robot you have to add some parameters in your _.bashrc_ archive:
+```sh
+export ROS_MASTER_URI=http://<IP_Robot>:11311
+export ROS_HOSTNAME=<IP_PC>
+```
+
+Then use the following command in a terminal:
+```sh
+ssh turtlebot@<IP_Robot>
+```
+or
+```sh
+ssh tb2@<IP_Robot>
+```
+
+Once you have done that, you should be in the robot. Now, to use it you must add some parameters in the robot's _.bashrc_ archive:
+
+```sh
+export ROS MASTER URI=http://localhost:11311
+export ROS HOSTNAME=<IP_Robot>
+```
 
 ## Steps for execution:
 
@@ -23,7 +46,7 @@ cd <route_to_DeliBot_root>
 catkin_make
 ```
 
-Also, it's compulsory to export the path of the folder as a parameter and it's recomended to include it in the _.bash_ archive:
+It's compulsory to export the path of the folder as a parameter and it's recomended to include it in the _.bashrc_ archive:
 ```sh
 export DELIBOT_PATH=<path_of_folder>
 ```
@@ -37,19 +60,38 @@ source devel/setup.bash
 
 __The next step is executing the scripts in the terminals, in the robot:__
 
+
 First Tab:
 ```sh
-roslaunch turtlebot3_gazebo Office_world.launch
+roslaunch turtlebot_bringup minimal.launch
 ```
-When gazebo have been loaded, you must remove the _waffle_ turtlebot.
-
 Second Tab:
 
 ```sh
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=<path_to_DeliBot_folder>/Delibot/src/siam-mot/Office.yaml
+roslaunch turtlebot_bringup hokuyo_ust10lx.launch
 ```
-When rviz have been loaded, you must adjust the _burger_ turtlebot to the correct position with ''2D Pose Estimate''.
+Third Tab:
+```sh
+export TURTLEBOT_3D_SENSOR=astra
+roslaunch turtlebot_navigation gmapping_demo.launch
+```
 
+Fourth Tab:
+```sh
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=<path_of_the_map>
+```
+Fifth Tab:
+
+```sh
+roslaunch turtlebot_rviz_launchers view_navigation.launch
+```
+When it is opened, you have to calibrate it moving around the robot with the following command.
+
+Third Tab:
+```sh
+roslaunch turtlebot_teleop keyboard_teleop.launch
+```
+After a few movements you have to stop the teleoperation.
 
 __Also executing the scripts in the terminals, in the personal computer:__
 
