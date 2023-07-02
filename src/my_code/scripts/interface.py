@@ -45,7 +45,7 @@ class InterEmplo(Frame):
             self.display2.config(state='disabled')
 
             # Define variable to load the dataframe
-            dataframe = openpyxl.load_workbook(self.folder + "/tfg_ros_real/src/my_code/datos_empleados.xlsx")
+            dataframe = openpyxl.load_workbook(self.folder + "/DeliBot_Real/src/my_code/datos_empleados.xlsx")
             # Define variable to read sheet
             dataframe1 = dataframe.active
             
@@ -62,7 +62,7 @@ class InterEmplo(Frame):
             self.display2.config(state='disabled')
 
             # Create an object of tkinter ImageTk
-            self.img = Image.open(self.folder + "/tfg_ros_real/src/my_code/fotos/"+row[2].value +".png")
+            self.img = Image.open(self.folder + "/DeliBot_Real/src/my_code/fotos/"+row[2].value +".png")
 
             self.img = ImageTk.PhotoImage(self.img.resize((300,150), Image.Resampling.LANCZOS))
 
@@ -93,7 +93,7 @@ class InterEmplo(Frame):
 
 
         # Define variable to load the dataframe
-        dataframe = openpyxl.load_workbook(self.folder + "/tfg_ros_real/src/my_code/datos_empleados.xlsx")
+        dataframe = openpyxl.load_workbook(self.folder + "/DeliBot_Real/src/my_code/datos_empleados.xlsx")
         # Define variable to read sheet
         dataframe1 = dataframe.active
         

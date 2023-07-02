@@ -28,9 +28,9 @@ class InterEmplo(Frame):
 
     def finish(self, new_image, selection):
         
-        cv.imwrite(self.folder + "/tfg_ros_real/src/siam-mot/demos/conocidos/"+selection +".jpg", new_image)
+        cv.imwrite(self.folder + "/DeliBot_Real/src/siam-mot/demos/conocidos/"+selection +".jpg", new_image)
 
-        os.remove(self.folder + "/tfg_ros_real/src/siam-mot/demos/"+selection +".jpg")
+        os.remove(self.folder + "/DeliBot_Real/src/siam-mot/demos/"+selection +".jpg")
         
         self.quit()
 
@@ -48,7 +48,7 @@ class InterEmplo(Frame):
             cam.release()
 
             detector = dlib.get_frontal_face_detector()
-            predictor = dlib.shape_predictor(self.folder + "/tfg_ros_real/src/my_code/dataset/shape_predictor_68_face_landmarks.dat")
+            predictor = dlib.shape_predictor(self.folder + "/DeliBot_Real/src/my_code/dataset/shape_predictor_68_face_landmarks.dat")
 
             gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
             # Detect the face
@@ -97,7 +97,7 @@ class InterEmplo(Frame):
 
             if(new_image.size != 0):
 
-                cv.imwrite(self.folder + "/tfg_ros_real/src/siam-mot/demos/"+selection +".jpg", new_image)
+                cv.imwrite(self.folder + "/DeliBot_Real/src/siam-mot/demos/"+selection +".jpg", new_image)
 
                 disp = "Se ha seleccionado al empleado "+selection
 
@@ -107,7 +107,7 @@ class InterEmplo(Frame):
                 self.display2.config(state='disabled')
 
                 # Define variable to load the dataframe
-                dataframe = openpyxl.load_workbook(self.folder + "/tfg_ros_real/src/my_code/datos_empleados.xlsx")
+                dataframe = openpyxl.load_workbook(self.folder + "/DeliBot_Real/src/my_code/datos_empleados.xlsx")
                 # Define variable to read sheet
                 dataframe1 = dataframe.active
                 
@@ -122,7 +122,7 @@ class InterEmplo(Frame):
                 self.display2.config(state='disabled')
 
                 # Create an object of tkinter ImageTk
-                self.img = Image.open(self.folder + "/tfg_ros_real/src/siam-mot/demos/"+selection +".jpg")
+                self.img = Image.open(self.folder + "/DeliBot_Real/src/siam-mot/demos/"+selection +".jpg")
 
                 self.img = ImageTk.PhotoImage(self.img.resize((200,200), Image.Resampling.LANCZOS))
 
@@ -155,7 +155,7 @@ class InterEmplo(Frame):
         self.p1.pack(fill='both', expand=True)
 
         # Define variable to load the dataframe
-        dataframe = openpyxl.load_workbook(self.folder + "/tfg_ros_real/src/my_code/datos_empleados.xlsx")
+        dataframe = openpyxl.load_workbook(self.folder + "/DeliBot_Real/src/my_code/datos_empleados.xlsx")
         # Define variable to read sheet
         dataframe1 = dataframe.active
         
