@@ -51,7 +51,7 @@ It's compulsory to export the path of the folder as a parameter and it's recomen
 export DELIBOT_PATH=<path_of_folder>
 ```
 
-In addition, it is important that you follow the steps below in each terminal before executing the rest of the scripts:
+In addition, it is important that you follow the steps below in each terminal, __in your computer__, before executing the rest of the scripts:
 ```sh
 conda activate <environment_name>
 cd <path_to_DeliBot_folder>
@@ -96,21 +96,27 @@ After a few movements you have to stop the teleoperation.
 __Also executing the scripts in the terminals, in the personal computer:__
 
 First Tab:
+
 ```sh
-roslaunch turtlebot3_gazebo Office_world.launch
+rosrun my_code navigation.py
 ```
-When gazebo have been loaded, you must remove the _waffle_ turtlebot.
 
 Second Tab:
 
 ```sh
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=<path_to_DeliBot_folder>/Delibot/src/siam-mot/Office.yaml
+cd src/siam-mot/demos
+python demo.py
 ```
-When rviz have been loaded, you must adjust the _burger_ turtlebot to the correct position with ''2D Pose Estimate''.
+
+Third Tab: Select the goal person
+
+```sh
+rosrun my_code interface.py
+```
+Finally, in order to indicate you have recived the package, press the _bumper_ in the robot
 
 
-
-Otherwise, if you just want to take a new photo for a employee, in the personal computer:
+__Otherwise, if you just want to take a new photo for a employee, in the personal computer:__
 
 First Tab:
 ```sh
