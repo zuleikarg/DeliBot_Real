@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zuleikarg/tfg_ros/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/zuleikarg/manipuladores/src/abb_driver/include/**",
+        "/home/zuleikarg/tfg_ros/src/my_code/include/**",
+        "/home/zuleikarg/manipuladores/src/scara_task/include/**",
+        "/home/zuleikarg/tfg_ros/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/zuleikarg/tfg_ros/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/zuleikarg/tfg_ros/src/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
