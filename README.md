@@ -108,7 +108,7 @@ cd src/siam-mot/demos
 python demo.py
 ```
 
-Third Tab: Select the goal person
+Sixth Tab: Select the goal person
 
 ```sh
 rosrun my_code interface.py
