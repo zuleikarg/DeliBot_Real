@@ -87,7 +87,7 @@ roslaunch turtlebot_rviz_launchers view_navigation.launch
 ```
 When it is opened, you have to calibrate it moving around the robot with the following command.
 
-Third Tab:
+Sixth Tab:
 ```sh
 roslaunch turtlebot_teleop keyboard_teleop.launch
 ```
@@ -108,7 +108,7 @@ cd src/siam-mot/demos
 python demo.py
 ```
 
-Sixth Tab: Select the goal person
+Third Tab: Select the goal person
 
 ```sh
 rosrun my_code interface.py
