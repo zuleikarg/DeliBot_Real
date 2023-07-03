@@ -73,7 +73,7 @@ roslaunch turtlebot_bringup hokuyo_ust10lx.launch
 Third Tab:
 ```sh
 export TURTLEBOT_3D_SENSOR=astra
-roslaunch turtlebot_navigation gmapping_demo.launch
+roslaunch astra_launch astra.launch 
 ```
 
 Fourth Tab:
