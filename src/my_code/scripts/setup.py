@@ -47,6 +47,8 @@ class InterEmplo(Frame):
 
             cam.release()
 
+            image = cv.flip(image,1)
+
             detector = dlib.get_frontal_face_detector()
             predictor = dlib.shape_predictor(self.folder + "/DeliBot_Real/src/my_code/dataset/shape_predictor_68_face_landmarks.dat")
 
