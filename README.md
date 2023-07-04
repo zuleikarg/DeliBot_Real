@@ -1,4 +1,5 @@
 # DeliBot_Real
+Bachelor's Final Project related to a system for transporting package to a person using autonomous navigation and artificial inteligence. __Real robot version.__
 
 ## Requirements
 
