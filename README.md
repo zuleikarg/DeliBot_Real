@@ -1,6 +1,10 @@
 # DeliBot_Real
 Bachelor's Final Project related to a system for transporting package to a person using autonomous navigation and artificial inteligence. __Real robot version.__
 
+You can watch the video with the results of this system on youtube: [Click here].
+
+If you want to see the __simulation version__: [DeliBot].
+
 ## Requirements
 
 To make your computer capable of ejecute all the scripts and make them work together, some installatins are needed.
@@ -148,3 +152,5 @@ Some references that have been crucial to achieve the main objective are:
    [Maskrcnn-benchmark]: <https://github.com/facebookresearch/maskrcnn-benchmark>
    [Face Recognition]: <https://github.com/ageitgey/face_recognition>
    [Kobuki_msgs]: <https://github.com/yujinrobot/kobuki_msgs>
+   [Click here]: <https://www.youtube.com/watch?v=y5hq0JLwr2g>
+   [DeliBot]: <https://github.com/zuleikarg/DeliBot>
